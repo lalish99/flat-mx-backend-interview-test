@@ -43,3 +43,24 @@ class BranchViewSet(viewsets.ViewSet):
             raise NotAcceptable(detail="Found 2 branches with same commit")
         raise NotFound
 
+
+class CommitViewSet(viewsets.ViewSet):
+    """
+    ViewSet for listing and retrieving repository commits.
+    """
+
+    serializer_class = serializers.CommitSerializer
+    lookup_field = "hexsha"
+
+    def retrieve(self, request, hexsha=None):
+        """
+        Retrieve the information of a specific commit.
+        """
+        repo = Repo('.')
+        try:
+            commit = repo.commit(hexsha)
+            serialized = serializers.CommitSerializer(commit)
+            return Response(serialized.data)
+        except Exception as e:
+            raise NotAcceptable(detail=f"Error getting commit {e}")
+        raise NotFound()
