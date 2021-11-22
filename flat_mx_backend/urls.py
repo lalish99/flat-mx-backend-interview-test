@@ -21,6 +21,7 @@ from git_api.api import views as git_api_views
 
 router = DefaultRouter()
 router.register(r'branches',git_api_views.BranchViewSet,basename='branch_view_set')
+router.register(r'commits',git_api_views.CommitViewSet,basename='commit_view_set')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
