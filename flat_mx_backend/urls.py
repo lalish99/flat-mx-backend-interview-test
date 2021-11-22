@@ -14,8 +14,15 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
+from rest_framework.routers import DefaultRouter
+
+from git_api.api import views as git_api_views
+
+router = DefaultRouter()
+router.register(r'branches',git_api_views.BranchViewSet,basename='branch_view_set')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api/v1/',include((router.urls,'pages_api'))),
 ]
