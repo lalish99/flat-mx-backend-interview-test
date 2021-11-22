@@ -29,6 +29,9 @@ class BranchViewSet(viewsets.ViewSet):
 
 
     def retrieve(self, request, commit=None):
+        """
+        Retrieve the information of a specific branch from the hexsha of the head commit.
+        """
         repo = Repo('.')
         remote_refs = repo.remote().refs
         def xx(ref):
