@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.3.0 (2021-11-22)
+### Feature
+* **git_api:** Added commit total and file stats ([`841ada4`](https://github.com/lalish99/flat-mx-backend-interview-test/commit/841ada46fdeb37877947197e0a984f03b8a98264))
+
 ## v0.2.0 (2021-11-22)
 ### Feature
 * Configured swagger and redoc urls for documentation ([`abd5907`](https://github.com/lalish99/flat-mx-backend-interview-test/commit/abd59072196829a65368f4750bf62c014741a9f9))
