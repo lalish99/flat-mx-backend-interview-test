@@ -58,13 +58,11 @@ class CommitSerializer(serializers.Serializer):
             d = {}
             d['file_name'] = file_name
             d['stats'] = files[file_name]
-            print(d)
             return d
         mapped_stats = map(custom_map, files.keys())
         return CommitFileStatsSerializer(mapped_stats, many=True).data
 
     def get_author(self, instance):
-        print(instance.stats)
         return AuthorSerializer(instance.author, many=False).data
 
 
