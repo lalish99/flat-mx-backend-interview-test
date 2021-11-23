@@ -2,50 +2,81 @@
 Interview test for fullstack Software Engineers
 
 ## Welcome!
-If you're reading this, it means we're interested in working with you and solving amazing and difficult problems in real-estate tech in Mexico.
+This project uses [Django](https://www.djangoproject.com/) for the backend, and [React](https://en.reactjs.org/) for its frontend.
 
-This README provides the instructions to a small, self-contained test for a FullStack Software Engineer position.
+Because both stacks are natively incompatible, and for further configuration of the repositories, this project is separated into two different repositories, this one for the backend and [this one](https://github.com/lalish99/flat-mx-frontend-interview-test/) for the frontend.
 
-## What we're looking for
-We're looking for a talented and driven full-stack engineer, comfortable with building responsive front end experiences, as well as with designing and building rigorous APIs and backend services. 
+You need both projects running in order to see the completed project. Each repository contains instructions on how to run them and which stack is required.
 
-This means that this test is designed to gather signal on your coding structure, the tradeoffs and decisions you make on API design, and how you build a lightweight frontend app to show the data coming from your API. We're excited to see what you build!
+----
+## Releases:
+For conviniece there is a release changelog, which can be accesed directly [on GitHub](https://github.com/lalish99/flat-mx-backend-interview-test/releases), or via the `CHANGELOG.md` [file](https://github.com/lalish99/flat-mx-backend-interview-test/blob/master/CHANGELOG.md). Both of this contain auto-generated releases, which are composed by all the commits between releases. Check [Semantic Release](https://github.com/semantic-release/semantic-release) for more information.
 
-## The test
-Today, we'll be building an API wrapper around the git information of this project. We suggest forking this repo and start working on it on your private fork, the url of which is the only thing you need to send us when you're done.
+**Note:**This repository uses a GitHub action for the purpose of generating the semantic release, and given that this module is not directly implemented in python, the following marketplace job [relekang/python-semantic-release](https://github.com/relekang/python-semantic-release) was implemented.
 
-The main objects we'll be dealing with are:
-- Commits
-- Authors
-- Branches
-- PRs
+----
+## Requirements
+First of all, you need to have python installed on your local machine, if you dont have it installed yet, go to: [https://www.python.org/downloads/](https://www.python.org/downloads/) and follow the instructions for your operating system.
 
-We'd like to see a visual representation of the git history of this repo as a **JS web-app**, using the API previously described. To be specific, we'd like to see the following:
-- A view where we can see the existing branches
-- A branch detail view where we can see all the commits to one specific branch, with commit messages, authors and timestamps.
-- A commit detail view where we can see the commit message, timestamp, number of files changed and author names / emails.
-- A "PR" create view, where we can choose two branches (base and compare), and merge them together, just like Pull Requests work in Github. 
-- A "PR" list view, where we see all created PRs and the following info: Author, Title, Description and Status (`Open`, `Closed`, `Merged`). If the status is `Open`, there should be a button that allows us to mark it as `Closed`.
+**Important:** Make sure you have `python3` installed.
 
-For the **PR create view**, we'll ask the user for a PR title and description, and we'll give them 2 options: either save it (Status = `Open`), or merge it. Note that merge operations can fail due to conflicts or other reasons, so make sure you handle and show whatever error happens when merging. There's no need to do something about these errors other than show them in the frontend. After a successful merge, the PR should move to a `Merged` status.
+----
+## Setup Instructions
+Before anything we need to clone this repository to our local machine, if it's your first time I highly recommend checking GitHub's guide on [how to clone a repository](https://docs.github.com/es/repositories/creating-and-managing-repositories/cloning-a-repository).
 
-## Deliverables
-We expect this test to take around 4 hours, but not significantly more (your time is very valuable!). We're giving you a week from the date you receive it to complete it and send us your repo URL, using **whatever stack you feel most comfortable with**. Due to this, we ask that you also provide a `README` with instructions for running your project, both back and frontend, along with setup instructions (or provide a Dockerfile and a `docker run` instruction).
+Move to the directory of the cloned repository and follow the next instructions for a virtual environment.
 
-It's up to you to design how this should look code-wise, but we don't expect you to model all git objects in a DB. We're ok with reading them using a library wrapper for git like [GitPython](https://gitpython.readthedocs.io/en/stable/), on-demand. The only DB design required is the one for PRs.
+Now with python installed we can continue to setup our environment and local workspace for running this project. I highly suggest using some sort of virtual environment, but you can still install everythin directly into your root python installation, but that might generate versioning errors.
 
-## Grading
-We'll grade this project according to completion percentage of the features requested, good coding style for both back and frontend. For us, good coding means:
-- It's readable. We read code much more often than we write it, so it's important that we're clear on what we're doing and comment any hairy parts (which we don't really expect to have in this test!).
-- It's reasonably well ordered and with a logically thought-out structure. We like to do separation of concerns, and deal with routing, DB models, serialization, etc in their own file structure / files. 
-- Clear, understandable variable names. No one wants to read the whole file to understand what the variable `c1_2` means.
+In this case I suggest using [virtualenv](https://virtualenv.pypa.io/en/latest/) which is easy to use and install, for instructions on how to install it you can check one of the following articles: [Official virtualenv docs](https://virtualenv.pypa.io/en/latest/installation.html), [Instalar Virtualenv usando pip3](https://help.dreamhost.com/hc/es/articles/115000695551-Instalar-y-usar-virtualenv-con-Python-3), [How to install virtualenv on ubuntu](https://gist.github.com/Geoyi/d9fab4f609e9f75941946be45000632b). 
 
-We also care about being able to run your test without significant effort on our part, so make sure you test the instructions you provide on your README.
+**Important:** To prevent git from detecting the files of the virtual environment as code for the repository name your virtual environment as `.venv`.
 
-### Things we won't be grading
-- Design chops: we care that you know enough CSS not to be surprised when you need to work on it, but we're not picky about your solution's UX/UI.
+----
+Every virtual environment has its own configuration, but in case you used virtualenv, the following code should create you an environment with the appropiate name and python version: 
+```bash
+$ virtualenv .venv -p python3
+```
 
-### Bonus points
-- Your code has tests.
+With your virtual environment created, you can now initialize it with the following command (for MacOS):
+```bash
+$ . ./.venv/bin/activate
+```
 
-If you come across any questions or anything we didn't cover on this README, feel free to reach out to us and we'll get you an answer as soon as possible. Happy coding!
+----
+This should start your environment and you should now see the name of the environment on your terminal:
+```bash
+(.venv) $
+```
+
+Now it's time to intsall the dependencies for this project, to do so you simply need to run the following command:
+```bash
+(.venv) $ pip install -r requirements.txt
+```
+**Important:** Make sure you are inside the directory of the cloned repository, otherwise you might get an error saying that the file `requirements.txt` does not exist.
+
+----
+After you've completed the previous steps you should be able to run the django migrate command:
+```bash
+(.venv) $ ./manage.py migrate
+```
+This command will generate a `.sqlite` file, in order to simulate a database for all our models.
+
+With the migration done, you can now initialize the server with Django's [runserver](https://docs.djangoproject.com/en/3.2/ref/django-admin/#runserver) command.
+```bash
+(.venv) $ ./manage.py runserver
+```
+**Important:** Make sure you are inside the directory of the cloned repository, otherwise you might get an error saying that the file `manage.py` does not exist.
+
+If everything went well you should now see the following log in your terminal:
+```bash
+Django version 3.2.9, using settings 'flat_mx_backend.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+```
+**Important:** The message must say `Starting development server at http://127.0.0.1:8000/` otherwise the server might be running on another port which will cause problems for the frontend connection. If you receive a message mentioning that another service is running on the same port, please terminate that service. This can be achieved bu closing the program that's running on that port (normally another web app or backend server).
+
+----
+## Documentation:
+Once you've got your project started you might go to `http://127.0.0.1:8000/docs/swagger/` or `http://127.0.0.1:8000/docs/redoc/` to visualize an interactive representation of the api.
+This schema visualization is auto-generated, thus on every update to the api this views will be automatically updated.
