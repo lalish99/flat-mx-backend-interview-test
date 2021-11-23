@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.7.1 (2021-11-23)
+### Fix
+* **git_api:** Viewset mixins and queryset ([`35887f6`](https://github.com/lalish99/flat-mx-backend-interview-test/commit/35887f6bd744afca7c3fc909e13f11181f9acb12))
+
 ## v0.7.0 (2021-11-23)
 ### Feature
 * **git_api:** Added base and rebase branches to pull request model ([`4b8571d`](https://github.com/lalish99/flat-mx-backend-interview-test/commit/4b8571db753ff3949bf437c918b157549a3024c1))
