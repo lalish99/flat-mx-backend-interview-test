@@ -2,6 +2,11 @@
 
 <!--next-version-placeholder-->
 
+## v0.4.0 (2021-11-23)
+### Feature
+* Configured django cors for incomming api calls ([`a6690ee`](https://github.com/lalish99/flat-mx-backend-interview-test/commit/a6690eeeb3891d2e63d4b82623a41608e58d7205))
+* Added django-cors-headers ([`2680995`](https://github.com/lalish99/flat-mx-backend-interview-test/commit/2680995f236f4a9a9a4347fdd30b6603f2254372))
+
 ## v0.3.0 (2021-11-22)
 ### Feature
 * **git_api:** Added commit total and file stats ([`841ada4`](https://github.com/lalish99/flat-mx-backend-interview-test/commit/841ada46fdeb37877947197e0a984f03b8a98264))
