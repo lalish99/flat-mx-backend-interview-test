@@ -13,6 +13,7 @@ You need both projects running in order to see the completed project. Each repos
 For conviniece there is a release changelog, which can be accesed directly [on GitHub](https://github.com/lalish99/flat-mx-backend-interview-test/releases), or via the `CHANGELOG.md` [file](https://github.com/lalish99/flat-mx-backend-interview-test/blob/master/CHANGELOG.md). Both of this contain auto-generated releases, which are composed by all the commits between releases. Check [Semantic Release](https://github.com/semantic-release/semantic-release) for more information.
 
 **Note:**This repository uses a GitHub action for the purpose of generating the semantic release, and given that this module is not directly implemented in python, the following marketplace job [relekang/python-semantic-release](https://github.com/relekang/python-semantic-release) was implemented.
+
 ----
 ## Requirements
 First of all, you need to have python installed on your local machine, if you dont have it installed yet, go to: [https://www.python.org/downloads/](https://www.python.org/downloads/) and follow the instructions for your operating system.
