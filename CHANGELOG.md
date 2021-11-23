@@ -2,6 +2,13 @@
 
 <!--next-version-placeholder-->
 
+## v0.5.1 (2021-11-23)
+### Fix
+* Readme format ([`be26208`](https://github.com/lalish99/flat-mx-backend-interview-test/commit/be2620885bb5ffc30e4fa2ee3a9d9e0a82f6486f))
+
+### Documentation
+* Added readme documentation ([`d088775`](https://github.com/lalish99/flat-mx-backend-interview-test/commit/d0887756c003caf53f4a11959c33e4790be3a3d3))
+
 ## v0.5.0 (2021-11-23)
 ### Feature
 * Added pull request viewset to urls ([`9c6fb0d`](https://github.com/lalish99/flat-mx-backend-interview-test/commit/9c6fb0dae0c9680b56addeb444b7d9e934100167))
