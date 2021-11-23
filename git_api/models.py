@@ -27,3 +27,11 @@ class PullRequest(models.Model):
         max_length=255,
     )
     description = models.TextField()
+    base_branch = models.CharField(
+        max_length=255,
+        default=None
+    )
+    rebase_branch = models.CharField(
+        max_length=255,
+        default=None
+    )
