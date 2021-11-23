@@ -1,6 +1,6 @@
 from django.contrib.auth.models import User
 from django.shortcuts import get_object_or_404
-from rest_framework import viewsets
+from rest_framework import viewsets, mixins
 from rest_framework.exceptions import NotAcceptable, NotFound
 from rest_framework.response import Response
 from git_api.api import serializers
@@ -67,3 +67,15 @@ class CommitViewSet(viewsets.ViewSet):
         except Exception as e:
             raise NotAcceptable(detail=f"Error getting commit {e}")
         raise NotFound()
+
+class PullRequestViewSet(
+    mixins.CreateModelMixin,
+    mixins.ListModelMixin,
+    mixins.RetrieveModelMixin,
+    viewsets.GenericViewSet
+):
+    """
+    ViewSet for listing, retrieving, creating and updating a Pull Request.
+    """
+
+    serializer_class = serializers.PullRequestSerializer
