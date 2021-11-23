@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.6.0 (2021-11-23)
+### Feature
+* Added url docs to readme ([`3f331fb`](https://github.com/lalish99/flat-mx-backend-interview-test/commit/3f331fb4fbb78381f9bbc83c5c94d4638be91645))
+
 ## v0.5.1 (2021-11-23)
 ### Fix
 * Readme format ([`be26208`](https://github.com/lalish99/flat-mx-backend-interview-test/commit/be2620885bb5ffc30e4fa2ee3a9d9e0a82f6486f))
