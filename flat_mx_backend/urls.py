@@ -38,6 +38,7 @@ schema_view = get_schema_view(
 router = DefaultRouter()
 router.register(r'branches',git_api_views.BranchViewSet,basename='branch_view_set')
 router.register(r'commits',git_api_views.CommitViewSet,basename='commit_view_set')
+router.register(r'pull_requests',git_api_views.PullRequestViewSet,basename='pull_requests_view_set')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
