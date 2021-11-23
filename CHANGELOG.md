@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.7.0 (2021-11-23)
+### Feature
+* **git_api:** Added base and rebase branches to pull request model ([`4b8571d`](https://github.com/lalish99/flat-mx-backend-interview-test/commit/4b8571db753ff3949bf437c918b157549a3024c1))
+
 ## v0.6.0 (2021-11-23)
 ### Feature
 * Added url docs to readme ([`3f331fb`](https://github.com/lalish99/flat-mx-backend-interview-test/commit/3f331fb4fbb78381f9bbc83c5c94d4638be91645))
