@@ -22,12 +22,8 @@ class PullRequest(models.Model):
     )
     author = models.CharField(
         max_length=255,
-        choices=StatusChoices.choices,
-        default=StatusChoices.OPEN
     )
     title = models.CharField(
         max_length=255,
-        choices=StatusChoices.choices,
-        default=StatusChoices.OPEN
     )
     description = models.TextField()
