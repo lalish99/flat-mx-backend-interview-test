@@ -29,11 +29,28 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+# CORS
+CORS_ORIGIN_ALLOW_ALL = True
+CORS_ALLOW_CREDENTIALS = True
+CORS_ALLOW_HEADERS = [
+    'accept',
+    'accept-encoding',
+    'authorization',
+    'canh-token',
+    'content-type',
+    'ca-token',
+    'origin',
+    'user-agent',
+    'x-csrftoken',
+    'x-requested-with',
+]
 
 # Application definition
 
 INSTALLED_APPS = [
     'git_api',
+
+    'corsheaders',
 
     'django.contrib.admin',
     'django.contrib.auth',
@@ -47,6 +64,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
