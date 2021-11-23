@@ -1,6 +1,7 @@
 from rest_framework import serializers
 from git import Repo
 from datetime import datetime
+from git_api import models
 
 class AuthorSerializer(serializers.Serializer):
     """
@@ -86,3 +87,10 @@ class BranchSerializer(serializers.Serializer):
             max_commits = self.context['max_commits']
         commits = list(repo.iter_commits(instance.path, max_count=max_commits))
         return CommitSerializer(commits, many=True).data
+
+
+class PullRequestSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = models.PullRequest
+        fields = '__all__'
