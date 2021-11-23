@@ -2,6 +2,17 @@
 
 <!--next-version-placeholder-->
 
+## v0.5.0 (2021-11-23)
+### Feature
+* Added pull request viewset to urls ([`9c6fb0d`](https://github.com/lalish99/flat-mx-backend-interview-test/commit/9c6fb0dae0c9680b56addeb444b7d9e934100167))
+* **git_api:** Created pull request view set with post, update, get ([`1b1f373`](https://github.com/lalish99/flat-mx-backend-interview-test/commit/1b1f3732e5296fcf0578e5247a3cc33fc1106c2a))
+* **git_api:** Pull request serializer ([`cdd8ca4`](https://github.com/lalish99/flat-mx-backend-interview-test/commit/cdd8ca427462696db892470d2f43ceff4ec07a0c))
+* **admin/git_api:** Registered pull request model to admin ([`16deda0`](https://github.com/lalish99/flat-mx-backend-interview-test/commit/16deda0859ac72caa940c0ae30210ab013be3f54))
+* **git_api:** Created pull request model ([`0a28598`](https://github.com/lalish99/flat-mx-backend-interview-test/commit/0a285985d03437e06c66eaadcb07437a868a4448))
+
+### Fix
+* Author and title types ([`ca3596b`](https://github.com/lalish99/flat-mx-backend-interview-test/commit/ca3596bb5b234ada7d9a0c5be9412709d74e2893))
+
 ## v0.4.0 (2021-11-23)
 ### Feature
 * Configured django cors for incomming api calls ([`a6690ee`](https://github.com/lalish99/flat-mx-backend-interview-test/commit/a6690eeeb3891d2e63d4b82623a41608e58d7205))
