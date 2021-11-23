@@ -75,3 +75,8 @@ Starting development server at http://127.0.0.1:8000/
 Quit the server with CONTROL-C.
 ```
 **Important:** The message must say `Starting development server at http://127.0.0.1:8000/` otherwise the server might be running on another port which will cause problems for the frontend connection. If you receive a message mentioning that another service is running on the same port, please terminate that service. This can be achieved bu closing the program that's running on that port (normally another web app or backend server).
+
+----
+## Documentation:
+Once you've got your project started you might go to `http://127.0.0.1:8000/docs/swagger/` or `http://127.0.0.1:8000/docs/redoc/` to visualize an interactive representation of the api.
+This schema visualization is auto-generated, thus on every update to the api this views will be automatically updated.
