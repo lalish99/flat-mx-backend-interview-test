@@ -6,6 +6,7 @@ from rest_framework.response import Response
 from git_api.api import serializers
 from git import Repo
 from rest_framework.decorators import action
+from git_api import models
 
 class BranchViewSet(viewsets.ViewSet):
     """
@@ -72,6 +73,7 @@ class PullRequestViewSet(
     mixins.CreateModelMixin,
     mixins.ListModelMixin,
     mixins.RetrieveModelMixin,
+    mixins.UpdateModelMixin,
     viewsets.GenericViewSet
 ):
     """
@@ -79,3 +81,4 @@ class PullRequestViewSet(
     """
 
     serializer_class = serializers.PullRequestSerializer
+    queryset = models.PullRequest.objects.all()
